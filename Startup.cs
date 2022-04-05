@@ -39,9 +39,7 @@ namespace api
             services.AddControllers(config => config.Filters.Add(new CustomExceptionAttribute()));
 
              services.AddDbContext<Context>(options => options
-            .UseNpgsql("Test")
-            .UseSnakeCaseNamingConvention()
-            .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()))
+            .UseInMemoryDatabase(databaseName: "sample_db")
             //.EnableSensitiveDataLogging()
             );
            
@@ -121,6 +119,7 @@ namespace api
         {
             // Add application services
             container.Register<ISample, api.Domains.Sample>(Lifestyle.Scoped);
+            container.Register<ISeed, api.Domains.Seed>(Lifestyle.Scoped);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
