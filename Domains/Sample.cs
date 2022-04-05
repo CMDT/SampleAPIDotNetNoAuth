@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace api.Domains
 {
-    public class Sample : ISample // A specialised domain that wraps Auth0 APIs
+    public class Sample : ISample
     {
         private readonly string domain;
 
@@ -19,8 +19,6 @@ namespace api.Domains
 
         public Sample(Context _context, ILogger<Sample> _logger)
         {
-            domain = Environment.GetEnvironmentVariable("AUTH0_DOMAIN");
-
             context = _context;
 
             logger = _logger;
