@@ -1,6 +1,6 @@
 # Template - .NET 6 - No Authentication/Authorisation
 
-This template contains a functional .NET 6 RESTful API, utilising local storage. It includes a definition of an object, Sample, as well as the Controller, DTO and business logic for the object. It also contains a Seed class, used for seeding the local storage in order to make use of the API.
+This template contains a functional .NET 6 RESTful API, utilising local storage. It includes a definition of an object, Sample, as well as the Controller, DTO and business logic for the object. It also contains a Seed class, used for seeding the local storage in order to make use of the API without a dedicated database
 
 ## File Structure
 
